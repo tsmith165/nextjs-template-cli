@@ -10,8 +10,8 @@ const colorPalettes = {
     'sunny-days': 'https://coolors.co/fdc500-ffd500-00296b-003f88-00509d',
     'violet-beauregarde': 'https://coolors.co/9b5de5-8b008b-89cff0-6050dc-00009c',
     'cool-blue': 'https://coolors.co/03045e-023e8a-0077b6-0096c7-00b4d8',
-    'warm-sunset': 'https://coolors.co/ef476f-ffd166-06d6a0-118ab2-073b4c',
-    'neon-vibes': 'https://coolors.co/fb3640-39c7c7-65f0d5-9ff7c7-f7ff37',
+    'neon-vibes': 'https://coolors.co/ef476f-ffd166-06d6a0-118ab2-073b4c',
+    'warm-sunset': 'https://coolors.co/fb3640-39c7c7-65f0d5-9ff7c7-f7ff37',
     'retro-wave': 'https://coolors.co/9b5de5-f15bb5-fee440-00bbf9-00f5d4',
 };
 
