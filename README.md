@@ -76,7 +76,7 @@ yarn dev
 
 9. Open your browser and visit http://localhost:3000 to see your new NextJS application in action!
 
-![Development Server Screenshot](assets/template-cli-reel.png)
+![Development Server Screenshot](assets/template-cli-reel.gif)
 
 ## Customization and Development
 
