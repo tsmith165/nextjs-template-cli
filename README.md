@@ -30,32 +30,50 @@ Changing your application's color scheme is a breeze with the built-in `yarn upd
 
 ## Getting Started
 
-1. Install the NextJS Template CLI globally:
+1. Clone the repository into your current working directory
 
 ```
-npm install -g nextjs-template-cli
+git clone https://github.com/your-username/nextjs-template-cli.git
 ```
 
-2. Create a new project using the CLI:
+2. Navigate to cloned project directory
 
 ```
-nextjs-template-cli init my-awesome-project
+cd nextjs-template-cli
 ```
 
-3. Follow the prompts to customize your project's configuration, such as choosing a color scheme and navbar style.
-4. Once the project is generated, navigate to the project directory:
+3. Install dependencies
+
+```
+yarn install
+```
+
+4. Build the project
+
+```
+yarn build
+```
+
+5. Create a new project using the CLI:
+
+```
+yarn start init my-awesome-project
+```
+
+6. Follow the prompts to customize your project's configuration, such as choosing a color scheme and navbar style.
+7. Once the project is generated, navigate to the project directory:
 
 ```
 cd my-awesome-project
 ```
 
-5. Start the development server:
+8. Start the development server:
 
 ```
 yarn dev
 ```
 
-6. Open your browser and visit http://localhost:3000 to see your new NextJS application in action!
+9. Open your browser and visit http://localhost:3000 to see your new NextJS application in action!
 
 ## Customization and Development
 
