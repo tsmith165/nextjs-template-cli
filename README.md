@@ -29,7 +29,7 @@ Choose from two meticulously crafted navbar and site menu configurations that ar
 Make your application truly yours by easily incorporating your own branding assets. The CLI supports SVG logos and favicons, ensuring that your application reflects your unique identity across all devices and platforms.
 
 🏗️ **Automated Configuration and Setup**
-Save time and focus on what matters most—building your application. The NextJS Template CLI takes care of the initial configuration for essential files such as `tailwind.config.js`, `next.config.js`, `package.json`, `.vscode`, `postcss.config.js`, and `next-env.d.ts`. It also installs the necessary packages using Yarn, providing a hassle-free setup process.
+Save time and focus on what matters most—building your application. The NextJS Template CLI takes care of the initial configuration for essential files such as `tailwind.config.cjs`, `next.config.js`, `package.json`, `.vscode`, `postcss.config.js`, and `next-env.d.ts`. It also installs the necessary packages using Yarn, providing a hassle-free setup process.
 
 🎨 **Convenient Color Scheme Updates**
 Changing your application's color scheme is a breeze with the built-in `yarn update-colors` script. Simply provide a Coolors.co link, and watch as your chosen color palette is seamlessly applied throughout your project.
@@ -109,7 +109,7 @@ yarn update-colors
 
 4. The script will extract the color codes from the selected color palette and update the following files:
 
--   tailwind.config.js: The color constants in the Tailwind CSS configuration file will be updated with the new color values.
+-   tailwind.config.cjs: The color constants in the Tailwind CSS configuration file will be updated with the new color values.
 -   next.config.js: The publicRuntimeConfig.colorScheme object will be updated with the new color values.
 -   public/favicon.svg: The fill color of the favicon SVG will be updated to match the new primary color.
 

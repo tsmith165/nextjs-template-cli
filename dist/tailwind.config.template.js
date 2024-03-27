@@ -1,3 +1,4 @@
+import typography from '@tailwindcss/typography';
 const colors = {
     primary: '{{PRIMARY}}',
     primary_dark: '{{PRIMARY_DARK}}',
@@ -7,15 +8,15 @@ const colors = {
     accent_color: '{{ACCENT_COLOR}}',
     grey: '#D3D3D3',
 };
-
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
     content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
     theme: {
         extend: {
             colors,
         },
+        project_name: '{{PROJECT_NAME}}',
     },
-    plugins: [require('@tailwindcss/typography')],
+    plugins: [typography],
     mode: 'jit',
 };
+//# sourceMappingURL=tailwind.config.template.js.map
