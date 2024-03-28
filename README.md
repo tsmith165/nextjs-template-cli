@@ -4,10 +4,6 @@ NextJS Template CLI is a powerful starter booster project designed to help you k
 
 ![NextJs Template CLI Banner](assets/next_ts_tailwind_coolors_template_cli.png)
 
-Check out some of the color schemes available!
-
-![Development Server Screenshot](assets/template-cli-reel.gif)
-
 ## Core Features
 
 🚀 **NextJS 14 with App Directory, Server Components, and Layout Optimizations**
@@ -96,7 +92,7 @@ yarn dev
 
 9. Open your browser and visit http://localhost:3000 to see your new NextJS application in action!
 
-![Development Server Screenshot](assets/site_screenshot.png)
+![Development Server Screenshot](assets/template-cli-reel.gif)
 
 ## Customization and Development
 
