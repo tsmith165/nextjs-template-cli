@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "target": "es2017",
-        "module": "ES2020",
+        "module": "ES2022",
         "strict": true,
         "esModuleInterop": true,
         "moduleResolution": "node",
@@ -9,5 +9,5 @@
         "sourceMap": true,
         "jsx": "react"
     },
-    "include": ["src/**/*"]
+    "include": ["src/**/*.ts", "src/**/*.mts"]
 }

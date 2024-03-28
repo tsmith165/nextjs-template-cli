@@ -29,10 +29,26 @@ Choose from two meticulously crafted navbar and site menu configurations that ar
 Make your application truly yours by easily incorporating your own branding assets. The CLI supports SVG logos and favicons, ensuring that your application reflects your unique identity across all devices and platforms.
 
 🏗️ **Automated Configuration and Setup**
-Save time and focus on what matters most—building your application. The NextJS Template CLI takes care of the initial configuration for essential files such as `tailwind.config.js`, `next.config.js`, `package.json`, `.vscode`, `postcss.config.js`, and `next-env.d.ts`. It also installs the necessary packages using Yarn, providing a hassle-free setup process.
+Save time and focus on what matters most—building your application. The NextJS Template CLI takes care of the initial configuration for essential files such as `tailwind.config.cjs`, `next.config.js`, `package.json`, `.vscode`, `postcss.config.js`, and `next-env.d.ts`. It also installs the necessary packages using Yarn, providing a hassle-free setup process.
 
 🎨 **Convenient Color Scheme Updates**
 Changing your application's color scheme is a breeze with the built-in `yarn update-colors` script. Simply provide a Coolors.co link, and watch as your chosen color palette is seamlessly applied throughout your project.
+
+🎨 **Custom Logo and Colorization**
+
+NextJS Template CLI now supports custom logo integration and automatic colorization using SVGRepo.com and Coolors.co. You can easily incorporate your own branding by selecting an SVG icon from SVGRepo.com or providing a custom URL during the project creation process.
+
+The selected logo will be automatically colorized based on the chosen color scheme from Coolors.co, ensuring a cohesive visual identity for your project. You can preview the colorized logo before finalizing your choices, and even regenerate the SVG icon with new attributes (image, color scheme, or color order) until you're satisfied with the result.
+
+To customize your project's logo:
+
+1. During the project creation process, you will be prompted to select an SVG icon from SVGRepo.com or enter a custom URL.
+2. Choose an icon from the provided options or enter a valid SVGRepo.com URL.
+3. The CLI will fetch the selected SVG icon and generate an image preview for you to review.
+4. If you want to make changes, you can regenerate the SVG icon with new attributes until you're happy with the result.
+5. Once you confirm your choices, the custom logo will be integrated into your project, and the favicon and logo component will be updated accordingly.
+
+Enjoy the flexibility and convenience of incorporating your own branding seamlessly into your NextJS projects!
 
 ## Getting Started
 
@@ -88,34 +104,18 @@ The NextJS Template CLI provides a solid foundation for your project, but the re
 
 Remember to leverage the power of TypeScript and Tailwind CSS to create maintainable, efficient, and visually stunning code. The CLI sets you up for success, but the rest is up to you!
 
-## 🎨 Updating Color Scheme
+## 🎨 Updating Theme (Color Scheme and Logo)
 
-NextJS Template CLI makes it easy to update the color scheme of your generated project. The `update_colors` script allows you to change the colors by providing a Coolors.co URL.
+NextJS Template CLI provides a convenient way to update your project's theme, including the color scheme and logo, using the `yarn update-theme` script. This script consolidates the functionality of the previous `yarn update-colors` and `yarn update-icons` scripts, providing a more streamlined theme update process.
 
-To update the color scheme:
+To update your project's theme:
 
 1. Make sure you are in the root directory of your generated project.
-
 2. Run the following command:
 
-```
-yarn update-colors
-```
-
-3. You will be prompted to select a color palette from a list of predefined options or enter a custom Coolors.co URL.
-
--   If you choose a predefined color palette, simply select it from the list.
--   If you want to use a custom color palette, select "Enter custom Coolors.co URL" and provide a valid Coolors.co URL when prompted.
-
-4. The script will extract the color codes from the selected color palette and update the following files:
-
--   tailwind.config.js: The color constants in the Tailwind CSS configuration file will be updated with the new color values.
--   next.config.js: The publicRuntimeConfig.colorScheme object will be updated with the new color values.
--   public/favicon.svg: The fill color of the favicon SVG will be updated to match the new primary color.
-
-5. The script will also run tests to ensure that the color updates were applied correctly. If the tests pass, you will see success messages indicating that the colors were updated successfully.
-
 That's it! Your project's color scheme will now reflect the selected color palette. You can run the development server to see the updated colors in action.
+
+![SVG Logo Generator](assets/svg_logo_generator.gif)
 
 ## Contributing
 
