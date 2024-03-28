@@ -115,6 +115,8 @@ To update your project's theme:
 
 That's it! Your project's color scheme will now reflect the selected color palette. You can run the development server to see the updated colors in action.
 
+![SVG Logo Generator](assets/svg_logo_generator.gif)
+
 ## Contributing
 
 We welcome contributions from the community! If you have any ideas, suggestions, or bug reports, please open an issue on the GitHub repository. If you'd like to contribute code, feel free to submit a pull request.
