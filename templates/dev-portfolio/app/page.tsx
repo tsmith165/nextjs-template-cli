@@ -44,8 +44,8 @@ export default function Home() {
                     <Technologies />
                     <Experience />
                     <Projects />
-                    <Volunteering />
                     <OpenSource />
+                    <Volunteering />
                     <Contact />
                 </div>
             </div>
