@@ -18,7 +18,7 @@ export const portfolioData = {
     ],
     experience: [
         {
-            company: 'Solidigm (HCL Contract)',
+            company: 'Solidigm (HCL)',
             position: 'Lead SSD Validation Developer',
             duration: '06/2021 - Present',
             description:
@@ -27,7 +27,7 @@ export const portfolioData = {
             logo: '/img/employers/solidigm_logo.png',
         },
         {
-            company: 'Intel (Kelly Contract)',
+            company: 'Intel (Kelly)',
             position: 'SSD Validation Developer',
             duration: '03/2018 - 06/2021',
             description:
@@ -50,6 +50,7 @@ export const portfolioData = {
             description: 'Art gallery sales site that fully handles web orders, payment processing, shipping, and support.',
             image: '/img/projects/jws_fine_art-gallery_screenshot.png',
             technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQl', 'Stripe', 'AWS S3'],
+            link: 'https://www.jwsfineart.com',
         },
         {
             title: 'Rust Wipes',
@@ -57,16 +58,10 @@ export const portfolioData = {
                 'Pulls raw data from the BattleMetrics API and processes it in order to output upcoming data that no other competitor has tracked.',
             image: '/img/projects/rust_wipes-homepage_screenshot.png',
             technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'MySQL', 'API Scraping'],
+            link: 'https://www.rustwipes.net',
         },
     ],
     volunteering: [
-        {
-            organization: 'Elk Grove HS Volleyball',
-            position: 'Assistant Coach',
-            duration: '01/2017 - 01/2019',
-            description:
-                "As a volunteer Assistant Coach for a high school volleyball team, I actively contributed to player development, teamwork, and performance. Through training sessions and strategic planning, I helped enhance the team's competitive edge while honing my leadership, communication, and organizational skills. This experience showcased my dedication to youth development and community engagement through sports.",
-        },
         {
             organization: 'HCL Mentor Program',
             position: 'Mentor',
@@ -74,16 +69,15 @@ export const portfolioData = {
             description:
                 'As a mentor in the HCL Mentor Program, I helped multiple freshers ramp up their skills and knowledge, enabling them to secure full-time positions within the company. Through one-on-one guidance, training sessions, and project collaborations, I actively contributed to their professional growth and success.',
         },
+        {
+            organization: 'Elk Grove HS Volleyball',
+            position: 'Assistant Coach',
+            duration: '01/2017 - 01/2019',
+            description:
+                "As a volunteer Assistant Coach for a high school volleyball team, I actively contributed to player development, teamwork, and performance. Through training sessions and strategic planning, I helped enhance the team's competitive edge while honing my leadership, communication, and organizational skills. This experience showcased my dedication to youth development and community engagement through sports.",
+        },
     ],
     openSourceContributions: [
-        {
-            title: 'LazyVim Ubuntu Installer',
-            description:
-                'A comprehensive setup script to automate the setup of WSL and install/configure Ubuntu with a GUI environment, RDP access, graphics-accelerated terminal, fonts/themes/icons, pre-configured Neovim (LazyVim), and various development tools for a quick dev environment startup.',
-            link: 'https://github.com/tsmith165/lazyvim-ubuntu-installer',
-            techStack: ['Bash', 'WSL', 'Ubuntu', 'Neovim', 'LazyVim'],
-            image: '/img/open_source/lazyvim_ubuntu_installer.png',
-        },
         {
             title: 'NextJS Template CLI',
             description:
@@ -91,6 +85,14 @@ export const portfolioData = {
             link: 'https://github.com/tsmith165/nextjs-template-cli',
             techStack: ['NextJS', 'TypeScript', 'Tailwind CSS', 'CLI'],
             image: '/img/open_source/template-cli-reel.gif',
+        },
+        {
+            title: 'LazyVim Ubuntu Installer',
+            description:
+                'A comprehensive setup script to automate the setup of WSL and install/configure Ubuntu with a GUI environment, RDP access, graphics-accelerated terminal, fonts/themes/icons, pre-configured Neovim (LazyVim), and various development tools for a quick dev environment startup.',
+            link: 'https://github.com/tsmith165/lazyvim-ubuntu-installer',
+            techStack: ['Bash', 'WSL', 'Ubuntu', 'Neovim', 'LazyVim'],
+            image: '/img/open_source/lazyvim_ubuntu_installer.png',
         },
         {
             title: 'Copy File Path and Contents (VSCode Extension)',

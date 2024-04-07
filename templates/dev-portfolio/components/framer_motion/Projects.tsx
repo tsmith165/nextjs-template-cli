@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { portfolioData } from '../../lib/portfolio_data';
 
 export default function Projects() {
@@ -37,15 +38,23 @@ export default function Projects() {
                         transition={{ duration: 0.5, delay: index * 0.2 }}
                         className="flex flex-col md:flex-row items-center">
                         <div className="md:w-1/2 mb-4 md:mb-0">
-                            <div className="relative h-fit w-fit rounded-lg overflow-hidden bg-secondary_dark">
-                                <img src={project.image} alt={project.title} className="object-cover object-center w-full h-full p-1.5" />
-                            </div>
+                            <Link href={project.link} target="_blank" rel="noopener noreferrer">
+                                <div className="relative h-fit w-fit rounded-lg overflow-hidden bg-secondary_dark">
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="object-cover object-center w-full h-full p-1.5"
+                                    />
+                                </div>
+                            </Link>
                         </div>
                         <div className="md:w-1/2 md:ml-8">
                             <h3 className="text-xl font-bold">
-                                <span className="bg-gradient-to-r from-secondary_dark to-secondary_light text-transparent bg-clip-text">
-                                    {project.title}
-                                </span>
+                                <Link href={project.link} target="_blank" rel="noopener noreferrer">
+                                    <span className="bg-gradient-to-r from-secondary_dark to-secondary_light text-transparent bg-clip-text">
+                                        {project.title}
+                                    </span>
+                                </Link>
                             </h3>
                             <p className="mt-2 text-secondary_light">{project.description}</p>
                             <div className="mt-4 flex flex-wrap gap-2">

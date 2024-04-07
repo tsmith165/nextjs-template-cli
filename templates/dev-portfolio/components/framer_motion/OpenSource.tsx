@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { portfolioData } from '../../lib/portfolio_data';
 
 export default function OpenSource() {
@@ -38,24 +39,26 @@ export default function OpenSource() {
                         transition={{ duration: 0.5, delay: index * 0.2 }}
                         className="flex flex-col md:flex-row items-center">
                         <div className="md:w-1/2 mb-4 md:mb-0">
-                            <div className="relative h-fit w-fit rounded-lg overflow-hidden bg-secondary_dark">
-                                <Image
-                                    src={contribution.image}
-                                    alt={contribution.title}
-                                    width={500}
-                                    height={500}
-                                    className="object-cover object-center w-full h-full p-1.5"
-                                    unoptimized={contribution.image.endsWith('.gif')}
-                                />
-                            </div>
+                            <Link href={contribution.link} target="_blank" rel="noopener noreferrer">
+                                <div className="relative h-auto w-full rounded-lg overflow-hidden bg-secondary_dark">
+                                    <Image
+                                        src={contribution.image}
+                                        alt={contribution.title}
+                                        width={500}
+                                        height={500}
+                                        className="object-cover object-center w-full h-full p-1.5"
+                                        unoptimized={contribution.image.endsWith('.gif')}
+                                    />
+                                </div>
+                            </Link>
                         </div>
                         <div className="md:w-1/2 md:ml-8">
                             <h3 className="text-xl font-bold">
-                                <span className="bg-gradient-to-r from-secondary_dark to-secondary_light text-transparent bg-clip-text">
-                                    <a href={contribution.link} target="_blank" rel="noopener noreferrer">
+                                <Link href={contribution.link} target="_blank" rel="noopener noreferrer">
+                                    <span className="bg-gradient-to-r from-secondary_dark to-secondary_light text-transparent bg-clip-text">
                                         {contribution.title}
-                                    </a>
-                                </span>
+                                    </span>
+                                </Link>
                             </h3>
                             <p className="mt-2 text-secondary">{contribution.description}</p>
                             <div className="mt-4 flex flex-wrap gap-2">
