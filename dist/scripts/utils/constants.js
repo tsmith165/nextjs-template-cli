@@ -11,7 +11,6 @@ const svgIcons = {
     'rocket-cloud': '530455/cloud-acceleration',
     'dolphin-splash': '530107/ocean',
     'drink-time': '530355/soda-water',
-    'bikini-daydream:': '530608/swimsuit',
     'icicle-drips': '532058/icicles',
     'calc-nerd': '530644/calculator',
     'analyze-charts': '530450/page-analysis',

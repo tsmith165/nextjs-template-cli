@@ -46,6 +46,12 @@ To customize your project's logo:
 
 Enjoy the flexibility and convenience of incorporating your own branding seamlessly into your NextJS projects!
 
+## Pre-Requisites
+
+1. git: https://git-scm.com/downloads
+2. VSCode (or any IDE/text editor): https://code.visualstudio.com/download
+3. Node v20: https://nodejs.org/en/download
+
 ## Getting Started
 
 1. Clone the repository into your current working directory
