@@ -1,8 +1,12 @@
 'use client';
 import { motion } from 'framer-motion';
-import { volunteering } from '../../lib/portfolio_data';
+import { portfolioData } from '../../lib/portfolio_data';
 
 export default function Volunteering() {
+    if (!portfolioData.volunteering || portfolioData.volunteering.length === 0) {
+        return null; // Don't render the component if no volunteering data is provided
+    }
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -24,7 +28,7 @@ export default function Volunteering() {
                 </span>
             </motion.h2>
             <div className="space-y-8">
-                {volunteering.map((vol, index) => (
+                {portfolioData.volunteering.map((vol, index) => (
                     <motion.div
                         key={vol.organization}
                         initial={{ opacity: 0, x: index % 2 === 0 ? 200 : -200 }}
@@ -33,7 +37,7 @@ export default function Volunteering() {
                         transition={{ duration: 0.5, delay: index * 0.2 }}
                         className="flex flex-col md:flex-row items-start md:items-center">
                         <div className="w-full md:w-1/3 md:text-right md:pr-8">
-                            <h3 className="text-xl font-bold ">
+                            <h3 className="text-xl font-bold">
                                 <span className="bg-gradient-to-r from-secondary_dark to-secondary_light text-transparent bg-clip-text">
                                     {vol.organization}
                                 </span>

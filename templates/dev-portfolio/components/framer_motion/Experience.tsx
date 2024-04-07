@@ -1,8 +1,12 @@
 'use client';
 import { motion } from 'framer-motion';
-import { experience } from '../../lib/portfolio_data';
+import { portfolioData } from '../../lib/portfolio_data';
 
 export default function Experience() {
+    if (!portfolioData.experience || portfolioData.experience.length === 0) {
+        return null; // Don't render the component if no experience data is provided
+    }
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -24,7 +28,7 @@ export default function Experience() {
                 </span>
             </motion.h2>
             <div className="space-y-8 max-w-full overflow-hidden">
-                {experience.map((exp, index) => (
+                {portfolioData.experience.map((exp, index) => (
                     <motion.div
                         key={exp.company}
                         initial={{ opacity: 0, x: index % 2 === 0 ? 200 : -200 }}

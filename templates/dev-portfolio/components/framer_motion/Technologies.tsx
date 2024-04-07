@@ -1,9 +1,13 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { technologies } from '../../lib/portfolio_data';
+import { portfolioData } from '../../lib/portfolio_data';
 
 export default function Technologies() {
+    if (!portfolioData.technologies || portfolioData.technologies.length === 0) {
+        return null; // Don't render the component if no technologies data is provided
+    }
+
     const itemVariants = {
         hidden: { opacity: 0, y: 50 },
         visible: (index: number) => ({
@@ -39,7 +43,7 @@ export default function Technologies() {
             </motion.h2>
             <div className="flex justify-center">
                 <div className="flex flex-wrap justify-center gap-4">
-                    {technologies.map((tech, index) => (
+                    {portfolioData.technologies.map((tech, index) => (
                         <motion.div
                             key={tech.name}
                             custom={index}

@@ -2,15 +2,19 @@
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import Link from 'next/link';
-import { portfolio } from '../../lib/portfolio_data';
+import { portfolioData } from '../../lib/portfolio_data';
 
 const contactItems = [
-    { label: 'Email', value: portfolio.email, direction: 'right', icon: FaEnvelope },
-    { label: 'LinkedIn', value: portfolio.linkedin, direction: 'left', icon: FaLinkedin },
-    { label: 'GitHub', value: portfolio.github, direction: 'right', icon: FaGithub },
+    { label: 'Email', value: portfolioData.personal?.email, direction: 'right', icon: FaEnvelope },
+    { label: 'LinkedIn', value: portfolioData.personal?.linkedin, direction: 'left', icon: FaLinkedin },
+    { label: 'GitHub', value: portfolioData.personal?.github, direction: 'right', icon: FaGithub },
 ];
 
 export default function Contact() {
+    if (!portfolioData.personal) {
+        return null; // Don't render the component if personal data is not provided
+    }
+
     const itemVariants = {
         hidden: (direction: string) => ({
             x: direction === 'left' ? 200 : -200,

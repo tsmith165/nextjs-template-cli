@@ -1,8 +1,12 @@
 'use client';
 import { motion } from 'framer-motion';
-import { projects } from '../../lib/portfolio_data';
+import { portfolioData } from '../../lib/portfolio_data';
 
 export default function Projects() {
+    if (!portfolioData.projects || portfolioData.projects.length === 0) {
+        return null; // Don't render the component if no projects data is provided
+    }
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -24,7 +28,7 @@ export default function Projects() {
                 </span>
             </motion.h2>
             <div className="space-y-8 max-w-full overflow-hidden">
-                {projects.map((project, index) => (
+                {portfolioData.projects.map((project, index) => (
                     <motion.div
                         key={project.title}
                         initial={{ opacity: 0, x: index % 2 === 0 ? 200 : -200 }}
@@ -38,7 +42,7 @@ export default function Projects() {
                             </div>
                         </div>
                         <div className="md:w-1/2 md:ml-8">
-                            <h3 className="text-xl font-bold ">
+                            <h3 className="text-xl font-bold">
                                 <span className="bg-gradient-to-r from-secondary_dark to-secondary_light text-transparent bg-clip-text">
                                     {project.title}
                                 </span>

@@ -1,11 +1,13 @@
-// /components/framer_motion/Hero.tsx
 'use client';
-
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { portfolio } from '../../lib/portfolio_data';
+import { portfolioData } from '../../lib/portfolio_data';
 
 export default function Hero() {
+    if (!portfolioData.personal) {
+        return null; // Don't render the component if personal data is not provided
+    }
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -24,8 +26,8 @@ export default function Hero() {
                 className="md:w-auto md:flex-shrink-0 md:pr-8">
                 <div className="relative w-full max-w-64 h-auto rounded-xl overflow-hidden bg-secondary_dark">
                     <Image
-                        src={portfolio.bioImage}
-                        alt={portfolio.name}
+                        src={portfolioData.personal.bioImage}
+                        alt={portfolioData.personal.name}
                         width={500}
                         height={500}
                         className="object-cover p-1.5 rounded-xl"
@@ -39,13 +41,13 @@ export default function Hero() {
                 transition={{ duration: 0.8 }}
                 animate={{ opacity: 1, x: 0 }}
                 className="md:flex-1 mt-8 md:mt-0 text-center md:text-left">
-                <h1 className="text-4xl font-bold mb-4 text-secondary_light">{portfolio.name}</h1>
+                <h1 className="text-4xl font-bold mb-4 text-secondary_light">{portfolioData.personal.name}</h1>
                 <p className="text-2xl mb-4">
                     <span className="bg-gradient-to-r from-secondary_light via-secondary via-30% to-primary_dark to-55% underline text-transparent bg-clip-text font-bold">
-                        {portfolio.title}
+                        {portfolioData.personal.title}
                     </span>
                 </p>
-                <p className="text-secondary_light">{portfolio.bio}</p>
+                <p className="text-secondary_light">{portfolioData.personal.bio}</p>
             </motion.div>
         </motion.div>
     );
