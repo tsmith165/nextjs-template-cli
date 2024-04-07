@@ -1,7 +1,7 @@
 // /scripts/utils/questions.ts
 import * as p from '@clack/prompts';
 import { Template } from './templates.js';
-import { colorPalettes, svgIcons, colorOrderChoices } from './constants.js';
+import { colorPalettes, svgIcons } from './constants.js';
 
 async function getTemplate(templates: Template[]): Promise<string> {
     const template = await p.select({
@@ -103,7 +103,9 @@ async function confirmOverwrite(): Promise<boolean> {
 
 async function getColorSchemeOrder(): Promise<string[]> {
     const colorSchemeOrder: string[] = [];
-    const availableColors = ['primary', 'primary_dark', 'secondary', 'secondary_light', 'secondary_dark'];
+    const availableColors = ['secondary', 'secondary_light', 'primary', 'secondary_dark', 'primary_dark'];
+    console.log('Suggested default color order is: ' + availableColors.join(' > '));
+    console.log('Press enter 5 times to select the default color order, or set your own order for accuracy.');
 
     for (let i = 0; i < 5; i++) {
         const colorChoice = await p.select({

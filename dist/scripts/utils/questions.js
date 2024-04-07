@@ -90,7 +90,9 @@ async function confirmOverwrite() {
 }
 async function getColorSchemeOrder() {
     const colorSchemeOrder = [];
-    const availableColors = ['primary', 'primary_dark', 'secondary', 'secondary_light', 'secondary_dark'];
+    const availableColors = ['secondary', 'secondary_light', 'primary', 'secondary_dark', 'primary_dark'];
+    console.log('Suggested default color order is: ' + availableColors.join(' > '));
+    console.log('Press enter 5 times to select the default color order, or set your own order for accuracy.');
     for (let i = 0; i < 5; i++) {
         const colorChoice = await p.select({
             message: `Select color ${i + 1} for the logo:`,

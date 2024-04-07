@@ -96,7 +96,6 @@ program
             }
 
             const should_regenerate = await shouldRegenerateSVG();
-            console.log('Regenerating SVG with new attributes?: ', should_regenerate);
             if (should_regenerate == false) {
                 break;
             }

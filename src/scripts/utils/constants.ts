@@ -18,39 +18,4 @@ const svgIcons: Record<string, string> = {
     'analyze-charts': '530450/page-analysis',
 };
 
-const colorOrderChoices = [
-    {
-        name: 'primary, primary_dark, secondary, secondary_light, secondary_dark',
-        value: ['primary', 'primary_dark', 'secondary', 'secondary_light', 'secondary_dark'],
-    },
-    {
-        name: 'primary, secondary, primary_dark, secondary_light, secondary_dark',
-        value: ['primary', 'secondary', 'primary_dark', 'secondary_light', 'secondary_dark'],
-    },
-    {
-        name: 'secondary, primary, primary_dark, secondary_light, secondary_dark',
-        value: ['secondary', 'primary', 'primary_dark', 'secondary_light', 'secondary_dark'],
-    },
-    {
-        name: 'secondary, primary, secondary_light, primary_dark, secondary_dark',
-        value: ['secondary', 'primary', 'secondary_light', 'primary_dark', 'secondary_dark'],
-    },
-    {
-        name: 'primary_dark, primary, secondary_light, secondary, secondary_dark',
-        value: ['primary_dark', 'primary', 'secondary_light', 'secondary', 'secondary_dark'],
-    },
-    {
-        name: 'primary_dark, secondary_light, primary, secondary, secondary_dark',
-        value: ['primary_dark', 'secondary_light', 'primary', 'secondary', 'secondary_dark'],
-    },
-    {
-        name: 'secondary_light, primary, primary_dark, secondary, secondary_dark',
-        value: ['secondary_light', 'primary', 'primary_dark', 'secondary', 'secondary_dark'],
-    },
-    {
-        name: 'secondary_light, primary_dark, primary, secondary, secondary_dark',
-        value: ['secondary_light', 'primary_dark', 'primary', 'secondary', 'secondary_dark'],
-    },
-];
-
-export { colorPalettes, svgIcons, colorOrderChoices };
+export { colorPalettes, svgIcons };
