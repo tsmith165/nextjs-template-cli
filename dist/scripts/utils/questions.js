@@ -38,7 +38,6 @@ async function getColorPalette() {
                 label: `${key} (${colorPalettes[key]})`,
                 value: colorPalettes[key],
             })),
-            { label: '---', value: undefined },
             {
                 label: 'Enter custom Coolors.co URL',
                 value: 'custom',
@@ -68,7 +67,6 @@ async function getIconChoice() {
                 label: `${key} - (www.svgrepo.com/svg/${svgIcons[key]})`,
                 value: `https://www.svgrepo.com/download/${svgIcons[key]}.svg`,
             })),
-            { label: '---', value: undefined },
             {
                 label: 'Enter custom svgrepo.com URL',
                 value: 'custom',
@@ -104,7 +102,6 @@ async function shouldRegenerateSVG() {
     const make_changes = await p.confirm({
         message: 'Should we make changes to the color scheme or logo attributes?',
     });
-    console.log('Make changes: ' + String(make_changes));
     return make_changes;
 }
 async function getAttributeToChange() {

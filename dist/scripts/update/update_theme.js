@@ -59,6 +59,7 @@ async function main() {
                 process.exit(0);
         }
     }
+    console.log('Theme update completed. Run `yarn dev` to see the changes.');
 }
 main();
 //# sourceMappingURL=update_theme.js.map

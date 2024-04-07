@@ -8,11 +8,12 @@
         "start": "node dist/cli.js"
     },
     "dependencies": {
+        "@clack/prompts": "^0.6.1",
         "@tailwindcss/typography": "^0.5.11",
         "commander": "^8.3.0",
         "fs-extra": "^10.1.0",
-        "@clack/prompts": "^0.6.1",
-        "open": "^10.1.0"
+        "open": "^10.1.0",
+        "react-icons": "^5.0.1"
     },
     "devDependencies": {
         "@types/fs-extra": "^9.0.13",
