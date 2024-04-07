@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { portfolioData } from '../../lib/portfolio_data';
 
 export default function Experience() {
@@ -38,15 +39,20 @@ export default function Experience() {
                         className="flex flex-col md:flex-row items-start md:items-center">
                         <div className="w-full md:w-1/3 md:text-right md:pr-8">
                             <h3 className="text-xl font-bold">
-                                <span className="bg-gradient-to-r from-secondary_dark to-secondary_light text-transparent bg-clip-text">
+                                <span className="bg-gradient-to-r from-secondary_light to-secondary_dark text-transparent bg-clip-text">
                                     {exp.company}
                                 </span>
                             </h3>
                             <p className="text-lg text-secondary_light md:mt-2">{exp.duration}</p>
                         </div>
-                        <div className="w-full md:w-2/3 mt-2 md:mt-0">
-                            <p className="text-lg font-bold text-secondary">{exp.position}</p>
-                            <p className="mt-2 text-secondary">{exp.description}</p>
+                        <div className="w-full md:w-2/3 mt-4 md:mt-0">
+                            <p className="text-lg font-bold text-secondary my-2">{exp.position}</p>
+                            <div className="flex flex-row space-x-4">
+                                <div className="relative min-h-12 min-w-12 max-w-12 max-h-12">
+                                    <Image src={exp.logo} alt={exp.company} fill className=" rounded-lg" />
+                                </div>
+                                <p className="text-secondary">{exp.description}</p>
+                            </div>
                             <div className="mt-4 flex flex-wrap gap-2">
                                 {exp.techStack.map((tech) => (
                                     <span

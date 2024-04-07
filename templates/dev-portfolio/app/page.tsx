@@ -6,6 +6,7 @@ import Technologies from '../components/framer_motion/Technologies';
 import Experience from '../components/framer_motion/Experience';
 import Projects from '../components/framer_motion/Projects';
 import Volunteering from '../components/framer_motion/Volunteering';
+import OpenSource from '../components/framer_motion/OpenSource';
 import Contact from '../components/framer_motion/Contact';
 
 export const metadata: Metadata = {
@@ -44,6 +45,7 @@ export default function Home() {
                     <Experience />
                     <Projects />
                     <Volunteering />
+                    <OpenSource />
                     <Contact />
                 </div>
             </div>

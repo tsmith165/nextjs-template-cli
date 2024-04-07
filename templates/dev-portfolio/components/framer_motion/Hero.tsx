@@ -41,7 +41,7 @@ export default function Hero() {
                 transition={{ duration: 0.8 }}
                 animate={{ opacity: 1, x: 0 }}
                 className="md:flex-1 mt-8 md:mt-0 text-center md:text-left">
-                <h1 className="text-4xl font-bold mb-4 text-secondary_light">{portfolioData.personal.name}</h1>
+                <h1 className="text-4xl font-bold mb-4 text-secondary">{portfolioData.personal.name}</h1>
                 <p className="text-2xl mb-4">
                     <span className="bg-gradient-to-r from-secondary_light via-secondary via-30% to-primary_dark to-55% underline text-transparent bg-clip-text font-bold">
                         {portfolioData.personal.title}
