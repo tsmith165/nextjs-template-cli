@@ -51,7 +51,7 @@ Enjoy the flexibility and convenience of incorporating your own branding seamles
 1. Clone the repository into your current working directory
 
 ```
-git clone https://github.com/your-username/nextjs-template-cli.git
+git clone https://github.com/tsmith165/nextjs-template-cli.git
 ```
 
 2. Navigate to cloned project directory
