@@ -17,7 +17,7 @@ export default function Experience() {
                 transition: { duration: 0.3 },
             }}
             viewport={{ once: false }}
-            className="w-4/5 mx-auto overflow-hidden">
+            className="w-4/5 md:w-3/5 mx-auto overflow-hidden">
             <motion.h2
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
