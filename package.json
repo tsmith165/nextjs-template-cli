@@ -17,7 +17,6 @@
     },
     "devDependencies": {
         "@types/fs-extra": "^9.0.13",
-        "@types/inquirer": "^8.2.1",
         "@types/next": "^9.0.0",
         "@types/node": "^18.0.0",
         "@types/react": "^18.2.69",
