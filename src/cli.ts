@@ -114,6 +114,9 @@ program
                 case 'Color Order':
                     colorSchemeOrder = await getColorSchemeOrder();
                     break;
+                case 'All Good!':
+                    console.log('All good! Proceeding with project creation.');
+                    break;
                 default:
                     console.log('Project creation cancelled.');
                     process.exit(0);
@@ -208,15 +211,18 @@ program
         }
 
         // Create .env file with the project name
+        console.log('Creating .env file...');
         const envContent = `PROJECT_NAME=${sanitizedProjectName}\nNODE_OPTIONS="--experimental-specifier-resolution=node --no-warnings=ExperimentalWarning"`;
         fs.writeFileSync(path.join(projectDir, '.env'), envContent);
 
         // Initialize a new yarn project and install dependencies
+        console.log('Initializing yarn project with all dependencies...');
         execSync(
             'yarn add next react react-dom tailwindcss @tailwindcss/typography postcss autoprefixer @types/react @types/react-dom open'
         );
 
         // Update the package.json file with the project name and update-theme script
+        console.log('Updating package.json...');
         const packageJsonPath = path.join(projectDir, 'package.json');
         const packageJson = fs.readJsonSync(packageJsonPath);
 

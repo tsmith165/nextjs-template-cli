@@ -167,7 +167,7 @@ program
     const envContent = `PROJECT_NAME=${sanitizedProjectName}\nNODE_OPTIONS="--experimental-specifier-resolution=node --no-warnings=ExperimentalWarning"`;
     fs.writeFileSync(path.join(projectDir, '.env'), envContent);
     // Initialize a new yarn project and install dependencies
-    execSync('yarn add next react react-dom tailwindcss @tailwindcss/typography postcss autoprefixer @types/react @types/react-dom inquirer open');
+    execSync('yarn add next react react-dom tailwindcss @tailwindcss/typography postcss autoprefixer @types/react @types/react-dom open');
     // Update the package.json file with the project name and update-theme script
     const packageJsonPath = path.join(projectDir, 'package.json');
     const packageJson = fs.readJsonSync(packageJsonPath);

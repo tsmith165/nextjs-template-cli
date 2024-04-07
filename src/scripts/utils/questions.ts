@@ -102,14 +102,24 @@ async function confirmOverwrite(): Promise<boolean> {
 }
 
 async function getColorSchemeOrder(): Promise<string[]> {
-    const colorSchemeOrder = await p.select({
-        message: 'Select the order in which the color scheme should be applied to the logo:',
-        options: colorOrderChoices.map((choice) => ({
-            label: choice.name,
-            value: choice.value,
-        })),
-    });
-    return colorSchemeOrder as string[];
+    const colorSchemeOrder: string[] = [];
+    const availableColors = ['primary', 'primary_dark', 'secondary', 'secondary_light', 'secondary_dark'];
+
+    for (let i = 0; i < 5; i++) {
+        const colorChoice = await p.select({
+            message: `Select color ${i + 1} for the logo:`,
+            options: availableColors.map((color) => ({
+                label: color,
+                value: color,
+            })),
+        });
+
+        colorSchemeOrder.push(colorChoice as string);
+        const selectedColorIndex = availableColors.indexOf(colorChoice as string);
+        availableColors.splice(selectedColorIndex, 1);
+    }
+
+    return colorSchemeOrder;
 }
 
 async function shouldRegenerateSVG(): Promise<boolean> {

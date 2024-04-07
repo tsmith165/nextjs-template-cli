@@ -1,6 +1,6 @@
 // /scripts/utils/questions.ts
 import * as p from '@clack/prompts';
-import { colorPalettes, svgIcons, colorOrderChoices } from './constants.js';
+import { colorPalettes, svgIcons } from './constants.js';
 async function getTemplate(templates) {
     const template = await p.select({
         message: 'Select a project template:',
@@ -89,13 +89,20 @@ async function confirmOverwrite() {
     return overwrite;
 }
 async function getColorSchemeOrder() {
-    const colorSchemeOrder = await p.select({
-        message: 'Select the order in which the color scheme should be applied to the logo:',
-        options: colorOrderChoices.map((choice) => ({
-            label: choice.name,
-            value: choice.value,
-        })),
-    });
+    const colorSchemeOrder = [];
+    const availableColors = ['primary', 'primary_dark', 'secondary', 'secondary_light', 'secondary_dark'];
+    for (let i = 0; i < 5; i++) {
+        const colorChoice = await p.select({
+            message: `Select color ${i + 1} for the logo:`,
+            options: availableColors.map((color) => ({
+                label: color,
+                value: color,
+            })),
+        });
+        colorSchemeOrder.push(colorChoice);
+        const selectedColorIndex = availableColors.indexOf(colorChoice);
+        availableColors.splice(selectedColorIndex, 1);
+    }
     return colorSchemeOrder;
 }
 async function shouldRegenerateSVG() {
