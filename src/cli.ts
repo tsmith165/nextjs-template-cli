@@ -3,7 +3,6 @@ import { execSync } from 'child_process';
 import fs from 'fs-extra';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
-import inquirer from 'inquirer';
 import open from 'open';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -214,7 +213,7 @@ program
 
         // Initialize a new yarn project and install dependencies
         execSync(
-            'yarn add next react react-dom tailwindcss @tailwindcss/typography postcss autoprefixer @types/react @types/react-dom inquirer open'
+            'yarn add next react react-dom tailwindcss @tailwindcss/typography postcss autoprefixer @types/react @types/react-dom open'
         );
 
         // Update the package.json file with the project name and update-theme script
