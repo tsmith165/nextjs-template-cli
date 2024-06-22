@@ -4,6 +4,7 @@ import fs from 'fs-extra';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
 import open from 'open';
+import os from 'os';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -24,7 +25,16 @@ import {
 
 import { fetchSvgIcon, updateFaviconSvg, updateLogoComponent, mapColorsToThemeColors } from './scripts/utils/svg_utils.js';
 
-const OUTPUT_DIR_DEFAULT = 'C:/DEV/next_js';
+const getDefaultOutputDir = () => {
+    const homeDir = os.homedir();
+    if (process.platform === 'win32') {
+        return 'C:/DEV/next_js';
+    } else {
+        return path.join(homeDir, 'dev', 'next_js', 'template_cli');
+    }
+};
+
+const OUTPUT_DIR_DEFAULT = getDefaultOutputDir();
 const ACCENT_COLOR_DEFAULT = '#44403c';
 
 program
@@ -43,6 +53,9 @@ program
         const sanitizedProjectName = projectName.replace(/ /g, '-');
 
         const outputDir = await getOutputDir(OUTPUT_DIR_DEFAULT);
+
+        // Create the output directory if it doesn't exist
+        fs.mkdirpSync(outputDir);
 
         let colorScheme = {
             primary: '#606c38',
@@ -214,19 +227,29 @@ program
         const envContent = `PROJECT_NAME=${sanitizedProjectName}\nNODE_OPTIONS="--experimental-specifier-resolution=node --no-warnings=ExperimentalWarning"`;
         fs.writeFileSync(path.join(projectDir, '.env'), envContent);
 
-        // Initialize a new yarn project and install dependencies
-        console.log('Initializing yarn project with all dependencies...');
-        execSync(
-            'yarn add next react react-dom tailwindcss @tailwindcss/typography postcss autoprefixer @types/react @types/react-dom open'
-        );
-
-        // Update the package.json file with the project name and update-theme script
+        // Update the existing package.json file
         console.log('Updating package.json...');
         const packageJsonPath = path.join(projectDir, 'package.json');
         const packageJson = fs.readJsonSync(packageJsonPath);
 
+        // Update the name field with the new project name
         packageJson.name = sanitizedProjectName.toLowerCase().replace(/ /g, '-');
+
+        // Add or update scripts for the new project
+        packageJson.scripts = {
+            ...packageJson.scripts,
+            dev: 'next dev',
+            build: 'next build',
+            start: 'next start',
+            lint: 'next lint',
+        };
+
+        // Write the updated package.json back to the file
         fs.writeJsonSync(packageJsonPath, packageJson, { spaces: 2 });
+
+        // Install additional dependencies using pnpm
+        console.log('Installing additional dependencies...');
+        execSync('pnpm add postcss autoprefixer', { stdio: 'inherit' });
 
         console.log(`Project "${sanitizedProjectName}" initialized successfully with the "${selectedTemplate.name}" template!`);
         console.log(`Project directory: ${projectDir}`);

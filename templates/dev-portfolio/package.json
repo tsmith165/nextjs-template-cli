@@ -1,37 +1,37 @@
 {
-  "type": "module",
-  "name": "dev-portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build && tsc -p tsconfig.scripts.json",
-    "start": "next start",
-    "lint": "next lint",
-    "update-theme": "yarn build-scripts && node dist/update/update_theme.js",
-    "build-scripts": "tsc -p tsconfig.scripts.json"
-  },
-  "dependencies": {
-    "@tailwindcss/typography": "^0.5.12",
-    "@types/inquirer": "^9.0.7",
-    "@types/react": "^18.2.74",
-    "@types/react-dom": "^18.2.24",
-    "autoprefixer": "^10.4.19",
-    "framer-motion": "^11.0.25",
-    "inquirer": "^9.2.17",
-    "next": "^14.1.4",
-    "open": "^10.1.0",
-    "postcss": "^8.4.38",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^5.0.1",
-    "tailwindcss": "^3.4.3"
-  },
-  "devDependencies": {
-    "@clack/prompts": "^0.6.1",
-    "@types/node": "20.11.30",
-    "esm": "latest",
-    "typescript": "5.4.3"
-  },
-  "types": "./src/types.d.ts"
+    "type": "module",
+    "name": "dev-portfolio",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build && tsc -p tsconfig.scripts.json",
+        "start": "next start",
+        "lint": "next lint",
+        "update-theme": "pnpm build-scripts && node dist/update/update_theme.js",
+        "build-scripts": "tsc -p tsconfig.scripts.json"
+    },
+    "dependencies": {
+        "@tailwindcss/typography": "^0.5.12",
+        "@types/inquirer": "^9.0.7",
+        "@types/react": "^18.2.74",
+        "@types/react-dom": "^18.2.24",
+        "autoprefixer": "^10.4.19",
+        "framer-motion": "^11.0.25",
+        "inquirer": "^9.2.17",
+        "next": "^14.1.4",
+        "open": "^10.1.0",
+        "postcss": "^8.4.38",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-icons": "^5.0.1",
+        "tailwindcss": "^3.4.3"
+    },
+    "devDependencies": {
+        "@clack/prompts": "^0.6.1",
+        "@types/node": "20.11.30",
+        "esm": "latest",
+        "typescript": "5.4.3"
+    },
+    "types": "./src/types.d.ts"
 }

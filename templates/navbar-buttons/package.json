@@ -1,6 +1,6 @@
 {
     "type": "module",
-    "name": "nextjs-tailwind-navbar-hamburger-menu",
+    "name": "nextjs-tailwind-navbar",
     "version": "0.1.0",
     "private": true,
     "scripts": {
@@ -8,7 +8,7 @@
         "build": "next build && tsc -p tsconfig.scripts.json",
         "start": "next start",
         "lint": "next lint",
-        "update-theme": "yarn build-scripts && node dist/update/update_theme.js",
+        "update-theme": "pnpm build-scripts && node dist/update/update_theme.js",
         "build-scripts": "tsc -p tsconfig.scripts.json"
     },
     "dependencies": {

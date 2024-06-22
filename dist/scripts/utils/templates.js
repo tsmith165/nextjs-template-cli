@@ -4,6 +4,10 @@ export const templates = [
         description: 'A Portfolio project using Next.js, Tailwind CSS, and Framer Motion',
     },
     {
+        name: 'navbar-scroll',
+        description: 'A Next.js project with a custom navbar and a scrolling main view',
+    },
+    {
         name: 'nextjs-tailwind-navbar',
         description: 'A Next.js project with Tailwind CSS and a custom navbar component',
     },

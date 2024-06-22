@@ -1,0 +1,48 @@
+{
+    "type": "module",
+    "name": "captial-city-staging",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build && tsc -p tsconfig.scripts.json",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@tailwindcss/typography": "^0.5.13",
+        "@types/inquirer": "^9.0.7",
+        "@types/react": "^18.3.3",
+        "@types/react-dom": "^18.3.0",
+        "@vercel/speed-insights": "^1.0.12",
+        "autoprefixer": "^10.4.19",
+        "axios": "^1.7.2",
+        "dotenv": "^16.4.5",
+        "framer-motion": "^11.2.10",
+        "fs": "0.0.1-security",
+        "leaflet": "^1.9.4",
+        "leaflet-draw": "^1.0.4",
+        "leaflet-editable": "^1.2.0",
+        "next": "^14.2.3",
+        "open": "^10.1.0",
+        "postcss": "^8.4.38",
+        "posthog-js": "^1.140.0",
+        "posthog-node": "^4.0.1",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-icons": "^5.2.1",
+        "react-leaflet": "^4.2.1",
+        "tailwindcss": "^3.4.4",
+        "uuid": "^10.0.0",
+        "zustand": "^4.5.2"
+    },
+    "devDependencies": {
+        "@clack/prompts": "^0.6.1",
+        "@types/leaflet": "^1.9.12",
+        "@types/node": "20.11.30",
+        "@types/uuid": "^10.0.0",
+        "esm": "latest",
+        "typescript": "5.4.3"
+    },
+    "types": "./src/types.d.ts"
+}

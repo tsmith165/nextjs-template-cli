@@ -25,10 +25,10 @@ Choose from two meticulously crafted navbar and site menu configurations that ar
 Make your application truly yours by easily incorporating your own branding assets. The CLI supports SVG logos and favicons, ensuring that your application reflects your unique identity across all devices and platforms.
 
 🏗️ **Automated Configuration and Setup**
-Save time and focus on what matters most—building your application. The NextJS Template CLI takes care of the initial configuration for essential files such as `tailwind.config.cjs`, `next.config.js`, `package.json`, `.vscode`, `postcss.config.js`, and `next-env.d.ts`. It also installs the necessary packages using Yarn, providing a hassle-free setup process.
+Save time and focus on what matters most—building your application. The NextJS Template CLI takes care of the initial configuration for essential files such as `tailwind.config.cjs`, `next.config.js`, `package.json`, `.vscode`, `postcss.config.js`, and `next-env.d.ts`. It also installs the necessary packages using pnpm, providing a hassle-free setup process.
 
 🎨 **Convenient Color Scheme Updates**
-Changing your application's color scheme is a breeze with the built-in `yarn update-colors` script. Simply provide a Coolors.co link, and watch as your chosen color palette is seamlessly applied throughout your project.
+Changing your application's color scheme is a breeze with the built-in `pnpm update-colors` script. Simply provide a Coolors.co link, and watch as your chosen color palette is seamlessly applied throughout your project.
 
 🎨 **Custom Logo and Colorization**
 
@@ -69,19 +69,19 @@ cd nextjs-template-cli
 3. Install dependencies
 
 ```
-yarn install
+pnpm install
 ```
 
 4. Build the project
 
 ```
-yarn build
+pnpm build
 ```
 
 5. Create a new project using the CLI:
 
 ```
-yarn start init my-awesome-project
+pnpm start init my-awesome-project
 ```
 
 ![CLI Inquirer Questions](assets/template_cli_screenshot.png) 6. Follow the prompts to customize your project's configuration, such as choosing a color scheme and navbar style. 7. Once the project is generated, navigate to the project directory:
@@ -93,7 +93,7 @@ cd my-awesome-project
 8. Start the development server:
 
 ```
-yarn dev
+pnpm dev
 ```
 
 9. Open your browser and visit http://localhost:3000 to see your new NextJS application in action!
@@ -108,7 +108,7 @@ Remember to leverage the power of TypeScript and Tailwind CSS to create maintain
 
 ## 🎨 Updating Theme (Color Scheme and Logo)
 
-NextJS Template CLI provides a convenient way to update your project's theme, including the color scheme and logo, using the `yarn update-theme` script. This script consolidates the functionality of the previous `yarn update-colors` and `yarn update-icons` scripts, providing a more streamlined theme update process.
+NextJS Template CLI provides a convenient way to update your project's theme, including the color scheme and logo, using the `pnpm update-theme` script. This script consolidates the functionality of the previous `pnpm update-colors` and `pnpm update-icons` scripts, providing a more streamlined theme update process.
 
 To update your project's theme:
 

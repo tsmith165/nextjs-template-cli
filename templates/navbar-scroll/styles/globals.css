@@ -14,11 +14,10 @@ a {
 
 ::-webkit-scrollbar {
     width: 8px; /* Thin scrollbar */
-    color: theme('colors.primary');
 }
 
 ::-webkit-scrollbar-track {
-    background-color: theme('colors.gray.300');
+    background-color: theme('colors.gray.950');
 }
 
 ::-webkit-scrollbar-thumb {
@@ -33,11 +32,15 @@ a {
 /* For Firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: theme('colors.primary') transparent;
+    scrollbar-color: theme('colors.primary') theme('colors.secondary_dark');
 }
 
 .react-datepicker-wrapper,
 .react-datepicker__input-container,
 .react-datepicker-wrapper .react-datepicker__input-container input {
     width: 100%;
+}
+
+.leaflet-control-attribution {
+    display: none !important;
 }
